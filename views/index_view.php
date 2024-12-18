@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="media/styles/site.css">
 </head>
 
-<body>
+<body class="background1">
     <?php include 'header.php'?>
+    <main>
+
+    </main>
+    <script src="code/index.js"></script>
+    <script>init();</script>
 </body>
 
 </html>
