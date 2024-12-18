@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="media/styles/site.css">
 </head>
 
-<body class="background1">
+<body>
     <?php include 'header.php'?>
     <main>
 
     </main>
+    <div class="background1" id="background"></div>
     <script src="code/index.js"></script>
     <script>init();</script>
 </body>

@@ -1,21 +1,34 @@
+.background1, .background2, .background3, .background4, .background5 {
+    transition: all 1.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(30%);
+}
 
+#background {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
 
 .background1 {
-    background-color: red;
+    background-image: url(../images/index_image1.jpg);
 }
 
 .background2 {
-    background-color: blue;
+    background-image: url(../images/index_image2.png);
 }
 
 .background3 {
-    background-color: purple;
+    background-image: url(../images/index_image3.jpg);
 }
 
 .background4 {
-    background-color: orange;
+    background-image: url(../images/index_image4.jpg);
 }
 
 .background5 {
-    background-color: green;
+    background-image: url(../images/index_image5.jpg);
 }
