@@ -1,84 +1,69 @@
-/* Reset alle marges, paddings en voeg box-sizing toe */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-body {
-    background-color: #222;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #222; /* Black background */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #fff;
-}
-
-.container {
+  }
+  
+  /* Main Container */
+  .container {
     width: 90%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #333;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-
-.section {
+    background-color: #222;
+    padding: 1rem 0;
+  }
+  
+  /* Section Styling */
+  .section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-}
-
-
-.circle {
+    gap: 1rem;
+  }
+  
+  /* Header (circle and bar) */
+  .circle {
     width: 50px;
     height: 50px;
-    background-color: #777;
+    background-color: #ccc;
     border-radius: 50%;
-}
-
-.bar {
+  }
+  
+  .bar {
     width: 150px;
     height: 20px;
-    background-color: #777;
-    border-radius: 4px;
-}
-
-.small-box-row, .large-box-row {
+    background-color: #ccc;
+  }
+  
+  /* Rows of Boxes */
+  .small-box-row, .large-box-row {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    justify-content: center;
-}
-
-.small-box {
+  }
+  
+  /* Small Boxes */
+  .small-box {
     width: 100px;
     height: 100px;
-    background-color: #888;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.small-box:hover {
-    transform: scale(1.05);
-    background-color: #aaa;
-}
-
-
-.large-box {
+    background-color: #ccc;
+  }
+  
+  /* Large Boxes */
+  .large-box {
     width: 250px;
     height: 250px;
-    background-color: #888;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.large-box:hover {
-    transform: scale(1.05);
-    background-color: #aaa;
-}
+    background-color: #ccc;
+  }
+  
