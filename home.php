@@ -1,7 +1,4 @@
 <?php
-class Home {
-    public function index() {
-    }
-}
 
-require 'views/home_view.php';
+include 'views/home_view.php';
+?>
