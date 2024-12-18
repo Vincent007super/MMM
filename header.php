@@ -4,4 +4,4 @@
     <h1 onclick="header()">&#9835;</h1>
 </header>
 
-<script src="code/header.js"></scrip >
+<script src="code/header.js"></script>
