@@ -8,8 +8,6 @@
 </head>
 <body>
 
-<?php include 'home.php' ?>
-
 <main class="main-content">
     <section class="section">
       <div class="content-block"></div>
