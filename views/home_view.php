@@ -4,30 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="media/styles/home.css">  
+    <link rel="stylesheet" href="media/styles/home.css"> 
+    <link rel="stylesheet" href="media/styles/site.css">   
 </head>
 <body>
+<?php include 'header.php'?> 
 
-<main class="main-content">
-    <section class="section">
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-    </section>
+<main>
+        <div class="wrapper1">
+            <h1>Onze 1000 hits</h1>
+            <div class="wrapper2">
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+            </div>
+        </div>
+        <div class="wrapper1">
+            <h1>Jazz</h1>
+            <div class="wrapper2">
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+            </div>
+        </div>
+        <div class="wrapper1">
+            <h1>Blues</h1>
+            <div class="wrapper2">
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+                <div class="opvul"> </div>
+            </div>
+        </div>
+    </main>
 
-    <section class="section">
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-    </section>
-
-    <section class="section">
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-      <div class="content-block"></div>
-    </section>
-  </main>
 </body>
 </html>
