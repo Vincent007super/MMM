@@ -15,12 +15,16 @@ main {
   gap: 20px; /* Voeg afstand toe tussen wrapper1-elementen */
 }
 
+.wrapper3 {
+  display: flex;
+  flex-direction: row;
+}
+
 .wrapper1 {
   display: flex;
   flex-direction: column;
   padding: 20px; /* Zorg voor ruimte rondom de secties */
 }
-
 
 .wrapper2 {
   display: flex;
@@ -32,4 +36,12 @@ main {
   width: 10%; /* Pas grootte aan naar percentage */
   height: 150px; /* Grotere hoogte voor betere weergave */
   border: 2px solid white; /* Border voor visuele scheiding */
+}
+
+.opvul2 {
+  background-color: red;
+  width: 5%; /* Pas grootte aan naar percentage */
+  height: 90px; /* Grotere hoogte voor betere weergave */
+  border: 2px solid white; /* Border voor visuele scheiding */
+  border-radius: 92%;
 }

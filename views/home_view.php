@@ -11,6 +11,11 @@
 <?php include 'header.php'?> 
 
 <main>
+      <div class="wrapper3">
+          <h2>artiest</h2>
+          <div class="opvul2"></div>
+        </div>
+
         <div class="wrapper1">
             <h1>Onze 1000 hits</h1>
             <div class="wrapper2">
@@ -26,6 +31,7 @@
                 <div class="opvul"> </div>
             </div>
         </div>
+
         <div class="wrapper1">
             <h1>Jazz</h1>
             <div class="wrapper2">
