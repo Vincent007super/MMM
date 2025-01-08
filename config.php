@@ -13,7 +13,6 @@ $options = [
 ];
 try {
     $conn = new PDO('mysql:host=localhost;dbname=MMM_data;charset=utf8mb4', 'glr100193', 'A13cd3Man');
-    echo "Verbonden met de database!";
 } catch (PDOException $e) {
     echo "Fout bij verbinding: " . $e->getMessage();
 }
