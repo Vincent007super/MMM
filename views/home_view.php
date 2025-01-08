@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php include 'header.php' ?>
+<?php include 'home.php' ?>
 
 <main class="main-content">
     <section class="section">
