@@ -1,25 +1,35 @@
 body {
   margin: 0;
+  background-color: blue; /* Donkere maar contrasterende achtergrondkleur */
+  color: white; /* Tekst wordt leesbaarder */
+}
+
+h1 {
+  color: #00ffff; /* Pas de kleur van de titels aan voor zichtbaarheid */
+  text-align: center; /* Center de titels */
 }
 
 main {
   display: flex;
   flex-direction: column;
+  gap: 20px; /* Voeg afstand toe tussen wrapper1-elementen */
 }
 
 .wrapper1 {
   display: flex;
   flex-direction: column;
+  padding: 20px; /* Zorg voor ruimte rondom de secties */
 }
+
 
 .wrapper2 {
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
-
 .opvul {
   background-color: red;
-  min-width: 100px;
-  min-height: 100px;
+  width: 10%; /* Pas grootte aan naar percentage */
+  height: 150px; /* Grotere hoogte voor betere weergave */
+  border: 2px solid white; /* Border voor visuele scheiding */
 }
