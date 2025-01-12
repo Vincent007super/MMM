@@ -10,7 +10,20 @@
 </head>
 
 <body>
-    <?php include 'header.php'?>
+    <?php include 'header.php' ?>
+    <main>
+        <div class="wrapper1">
+            <h1>Meld je nu aan voor <b>de</b> nieuwe muziek app van het jaar!</h1>
+            <button type="button">
+                <a href="#">
+                    Schrijf je nu in
+                </a>
+            </button>
+        </div>
+    </main>
+    <div class="background1" id="background"></div>
+    <script src="code/index.js"></script>
+    <script>init();</script>
 </body>
 
 </html>
