@@ -1,45 +1,50 @@
 <?php
-// include 'config.php'; // Your database connection file
+require 'config.php'; // Your database connection file
 
-// // Connect to the database
-// $conn = new mysqli($host, $user, $pass, $db);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
 
-// // Fetch all artists
-// $artists = $conn->query("SELECT * FROM artists");
+// Connect to the database
+$conn = new mysqli($host, $user, $pass, $db);
 
-// // Function to fetch random songs for an artist
-// function getSongsByArtist($conn, $artist_id, $limit = 6) {
-//     $sql = "SELECT * FROM songs WHERE artist_id = $artist_id LIMIT $limit";
-//     return $conn->query($sql);
-// }
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-// // Function to fetch random songs
-// function getRandomSongs($conn, $limit = 4) {
-//     $sql = "SELECT songs.*, artists.name AS artist_name 
-//             FROM songs 
-//             JOIN artists ON songs.artist_id = artists.id 
-//             ORDER BY RAND() LIMIT $limit";
-//     return $conn->query($sql);
-// }
+// Fetch all Artiest
+$Artiest = $conn->query("SELECT * FROM Artiest");
 
-// // Prepare the data for the page
-// $artist_rows = [];
-// while ($artist = $artists->fetch_assoc()) {
-//     $songs = getSongsByArtist($conn, $artist['id']);
-//     $artist_rows[] = [
-//         'artist' => $artist,
-//         'songs' => $songs->fetch_all(MYSQLI_ASSOC),
-//     ];
-// }
+// Function to fetch random nummers for an Artiest
+function getnummersByArtiest($conn, $gebrID, $limit = 6) {
+    $sql = "SELECT * FROM nummers WHERE gebrID = $gebrID LIMIT $limit";
+    return $conn->query($sql);
+}
 
-// // Fetch random songs
-// $random_songs = getRandomSongs($conn);
+// Function to fetch random nummers
+function getRandomnummers($conn, $limit = 4) {
+    $sql = "SELECT nummers.*, Artiest.artname AS artname 
+            FROM nummers 
+            JOIN Artiest ON nummers.gebrID = Artiest.gebrID 
+            ORDER BY RAND() LIMIT $limit";
+    return $conn->query($sql);
+}
 
-// // Close connection
-// $conn->close();
+// Prepare the data for the page
+$Artiest_rows = [];
+while ($Artiest = $Artiest->fetch_assoc()) {
+    $nummers = getnummersByArtiest($conn, $Artiest['gebrID']);
+    $Artiest_rows[] = [
+        'Artiest' => $Artiest,
+        'nummers' => $nummers->fetch_all(MYSQLI_ASSOC),
+    ];
+}
+
+// Fetch random nummers
+$random_nummers = getRandomnummers($conn);
+
+// Close connection
+$conn->close();
 
 include 'views/home_view.php';

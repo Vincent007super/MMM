@@ -13,24 +13,25 @@
     <?php include 'header.php' ?>
 
     <main>
-    <?php foreach ($artist_rows as $row): ?>
-        <div class="artistInfo">
-            <div class="artistImg" style="background-image: url('<?= $row['artist']['image_url'] ?>');"></div>
+      
+    <?php foreach ($Artiest_rows as $row): ?>
+        <div class="ArtiestInfo">
+            <div class="ArtiestImg" style="background-image: url('<?= $row['Artiest']['image_url'] ?>');"></div>
             <div class="wrapper6">
-                <div class="artistName"><?= htmlspecialchars($row['artist']['name']) ?></div>
+                <div class="ArtiestName"><?= htmlspecialchars($row['Artiest']['name']) ?></div>
             </div>
         </div>
 
         <div class="wrapper1">
             <div class="wrapper2">
-                <?php foreach ($row['songs'] as $song): ?>
+                <?php foreach ($row['nummers'] as $nummer): ?>
                     <div class="wrapper3">
-                        <div class="songImg" style="background-image: url('<?= $song['image_url'] ?>');"></div>
+                        <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
                         <div class="wrapper4">
-                            <h1><?= htmlspecialchars($song['title']) ?></h1>
+                            <h1><?= htmlspecialchars($nummer['title']) ?></h1>
                             <div class="wrapper5">
-                                <h5><?= htmlspecialchars($row['artist']['name']) ?></h5>
-                                <h5><?= htmlspecialchars($song['duration']) ?></h5>
+                                <h5><?= htmlspecialchars($row['Artiest']['name']) ?></h5>
+                                <h5><?= htmlspecialchars($nummer['duration']) ?></h5>
                             </div>
                         </div>
                     </div>
@@ -41,14 +42,15 @@
 
     <div class="wrapper1">
         <div class="wrapper2">
-            <?php foreach ($random_songs as $song): ?>
+            <?php foreach ($random_nummers as $nummer): ?>
                 <div class="wrapper3">
-                    <div class="songImg" style="background-image: url('<?= $song['image_url'] ?>');"></div>
+                    <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
                     <div class="wrapper4">
-                        <h1><?= htmlspecialchars($song['title']) ?></h1>
+                        <h1><?= htmlspecialchars($nummer['title']) ?></h1>
                         <div class="wrapper5">
-                            <h5><?= htmlspecialchars($song['artist_name']) ?></h5>
-                            <h5><?= htmlspecialchars($song['duration']) ?></h5>
+                            <h5><?= htmlspecialchars($nummer['Artiest_name']) ?></h5>
+                            <h5><?= htmlspecialchars($nummer['duration']) ?></h5>
+
                         </div>
                     </div>
                 </div>
