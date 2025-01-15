@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
+$Artiest_rows = [];
 // Connect to the database
 $conn = new mysqli($host, $user, $pass, $db);
 
@@ -24,7 +24,7 @@ function getnummersByArtiest($conn, $gebrID, $limit = 6) {
 
 // Function to fetch random nummers
 function getRandomnummers($conn, $limit = 4) {
-    $sql = "SELECT nummers.*, Artiest.artname AS artname 
+    $sql = "SELECT nummers.*, Artiest AS artname 
             FROM nummers 
             JOIN Artiest ON nummers.gebrID = Artiest.gebrID 
             ORDER BY RAND() LIMIT $limit";
@@ -32,16 +32,23 @@ function getRandomnummers($conn, $limit = 4) {
 }
 
 // Prepare the data for the page
-$Artiest_rows = [];
-while ($Artiest = $Artiest->fetch_assoc()) {
-    $nummers = getnummersByArtiest($conn, $Artiest['gebrID']);
-    $Artiest_rows[] = [
-        'Artiest' => $Artiest,
-        'nummers' => $nummers->fetch_all(MYSQLI_ASSOC),
-        'image' => $Artiest['image_column'], // Replace 'image_column' with the actual column name
-    ];
-}
+if ($Artiest) {
 
+    if (empty($Artiest_rows)) {
+        die("Geen artiesten gevonden.");
+    }
+
+    while ($Artiest_rows = $Artiest->fetch_assoc()) {
+        $nummers = getnummersByArtiest($conn, $artiest_row['gebrID']);
+        $Artiest_rows[] = [
+            'Artiest' => $artiest_row,
+            'nummers' => $nummers ? $nummers->fetch_all(MYSQLI_ASSOC) : [],
+            'image' => $artiest_row['image_data'], // Controleer of deze kolom bestaat
+        ];
+    }
+} else {
+    die("Fout bij ophalen van artiesten: " . $conn->error);
+}
 // Fetch random nummers
 $random_nummers = getRandomnummers($conn);
 
