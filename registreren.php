@@ -69,5 +69,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-include 'registreren_view.php';
+include 'views/registreren_view.php';
 ?>
