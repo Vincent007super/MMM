@@ -13,6 +13,7 @@
     <?php include 'header.php' ?>
 
     <main>
+      
     <?php foreach ($Artiest_rows as $row): ?>
         <div class="ArtiestInfo">
             <div class="ArtiestImg" style="background-image: url('<?= $row['Artiest']['image_url'] ?>');"></div>
@@ -49,6 +50,7 @@
                         <div class="wrapper5">
                             <h5><?= htmlspecialchars($nummer['Artiest_name']) ?></h5>
                             <h5><?= htmlspecialchars($nummer['duration']) ?></h5>
+
                         </div>
                     </div>
                 </div>
