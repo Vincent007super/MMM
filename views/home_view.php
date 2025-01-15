@@ -17,7 +17,7 @@
         <?php foreach ($Artiest_rows as $row): ?>
             <div class="ArtiestInfo">
                 <div class="artistImg">
-                    <img src="<?php echo htmlspecialchars($Artiest_row['Artiest']['image_data']); ?>"
+                    <img src="media/images/nummers<?php echo htmlspecialchars($Artiest_row['Artiest']['image_data']); ?>"
                         alt="<?php echo htmlspecialchars($Artiest_row['Artiest']['name']); ?>">
                 </div>
                 <div class="wrapper6">
