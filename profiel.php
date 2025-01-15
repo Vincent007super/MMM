@@ -46,5 +46,5 @@ $stmt_geblokkeerd->execute([':blokker' => $huidige_gebruiker, ':geblokkeerde' =>
 $geblokkeerd = $stmt_geblokkeerd->fetch() !== false;
 
 // Geef de profielgegevens door aan de view
-include 'profiel_view.php';
+include 'views/profiel_view.php';
 ?>
