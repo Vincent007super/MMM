@@ -48,4 +48,3 @@ $random_nummers = getRandomnummers($conn);
 $conn->close();
 
 include 'views/home_view.php';
-
