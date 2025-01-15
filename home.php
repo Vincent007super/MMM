@@ -38,6 +38,7 @@ while ($Artiest = $Artiest->fetch_assoc()) {
     $Artiest_rows[] = [
         'Artiest' => $Artiest,
         'nummers' => $nummers->fetch_all(MYSQLI_ASSOC),
+        'image' => $Artiest['image_column'], // Replace 'image_column' with the actual column name
     ];
 }
 
