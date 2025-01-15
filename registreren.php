@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ]);
 
                     // Stuur verificatie-e-mail
-                    $verificatieLink = "https://100193.stu.sd-lab.nl/Beroeps/verificatie.php?token=$verificatietoken";
+                    $verificatieLink = "https://089329.stu.sd-lab.nl/MMM/verificatie.php?token=$verificatietoken";
                     $subject = "Account Verificatie";
                     $message = "Klik op de volgende link om je account te verifiëren: $verificatieLink";
                     $headers = "From: softwaredeveloperglr@gmail.com";
