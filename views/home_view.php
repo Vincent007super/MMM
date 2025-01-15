@@ -17,7 +17,7 @@
         <?php foreach ($Artiest_rows as $row): ?>
             <div class="ArtiestInfo">
                 <div class="artistImg">
-                    <img src="media/images/nummers<?php echo htmlspecialchars($Artiest_row['Artiest']['image_data']); ?>"
+                    <img src="media/images/artiesten<?php echo htmlspecialchars($Artiest_row['Artiest']['image_data']); ?>"
                         alt="<?php echo htmlspecialchars($Artiest_row['Artiest']['name']); ?>">
                 </div>
                 <div class="wrapper6">
@@ -29,7 +29,7 @@
                 <div class="wrapper2">
                     <?php foreach ($row['nummers'] as $nummer): ?>
                         <div class="wrapper3">
-                            <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
+                            <div class="nummerImg" style="background-image: url('media/images/nummers/<?= $nummer['image_url'] ?>');"></div>
                             <div class="wrapper4">
                                 <h1><?= htmlspecialchars($nummer['title']) ?></h1>
                                 <div class="wrapper5">
@@ -47,7 +47,7 @@
             <div class="wrapper2">
                 <?php foreach ($random_nummers as $nummer): ?>
                     <div class="wrapper3">
-                        <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
+                        <div class="nummerImg" style="background-image: url('media/images/nummers/<?= $nummer['image_url'] ?>');"></div>
                         <div class="wrapper4">
                             <h1><?= htmlspecialchars($nummer['title']) ?></h1>
                             <div class="wrapper5">
