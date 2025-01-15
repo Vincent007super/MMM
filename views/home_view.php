@@ -1,199 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="media/styles/home.css"> 
-    <link rel="stylesheet" href="media/styles/site.css">   
+    <link rel="stylesheet" href="media/styles/home.css">
+    <link rel="stylesheet" href="media/styles/site.css">
 </head>
+
 <body>
-<?php include 'header.php'?> 
+    <?php include 'header.php' ?>
 
-<main>
-      <div class="wrapper5">
-        <div class="opvul2"></div> 
-         <div class="wrapper6">
-         <div class="opvul1"></div> 
-    </div>
-</div>
-
-
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                    <h1>Cock 'n Ball torture</h1> <!--Title-->
-                    <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                        <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-        </div>
-        <!-- <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
+    <main>
+    <?php foreach ($Artiest_rows as $row): ?>
+        <div class="ArtiestInfo">
+            <div class="ArtiestImg" style="background-image: url('<?= $row['Artiest']['image_url'] ?>');"></div>
+            <div class="wrapper6">
+                <div class="ArtiestName"><?= htmlspecialchars($row['Artiest']['name']) ?></div>
             </div>
         </div>
 
-
-        <div class="wrapper5">
-          <div class="opvul2"></div>
-          <div class="wrapper6">
-         <div class="opvul1"></div> 
-        </div>
-        </div>
-
         <div class="wrapper1">
             <div class="wrapper2">
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
+                <?php foreach ($row['nummers'] as $nummer): ?>
+                    <div class="wrapper3">
+                        <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
+                        <div class="wrapper4">
+                            <h1><?= htmlspecialchars($nummer['title']) ?></h1>
+                            <div class="wrapper5">
+                                <h5><?= htmlspecialchars($row['Artiest']['name']) ?></h5>
+                                <h5><?= htmlspecialchars($nummer['duration']) ?></h5>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-        </div> -->
-
-
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                    <h1>Cock 'n Ball torture</h1> <!--Title-->
-                    <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-                
-                        <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                    </div>
-                    </div>
-                    </div>
         </div>
+    <?php endforeach; ?>
 
-        <div class="wrapper5">
-        <div class="opvul2"></div> 
+    <div class="wrapper1">
+        <div class="wrapper2">
+            <?php foreach ($random_nummers as $nummer): ?>
+                <div class="wrapper3">
+                    <div class="nummerImg" style="background-image: url('<?= $nummer['image_url'] ?>');"></div>
+                    <div class="wrapper4">
+                        <h1><?= htmlspecialchars($nummer['title']) ?></h1>
+                        <div class="wrapper5">
+                            <h5><?= htmlspecialchars($nummer['Artiest_name']) ?></h5>
+                            <h5><?= htmlspecialchars($nummer['duration']) ?></h5>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
+</main>
 
-<div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                        </div>
-                </div>
-                </div>
-
-                        <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                <h1>Cock 'n Ball torture</h1> <!--Title-->
-                <div class="wrapper5">
-                        <h5>Sima boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-        </div>
-    </main>
 
 </body>
+
 </html>

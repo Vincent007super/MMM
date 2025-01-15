@@ -60,12 +60,6 @@ main {
   gap: 10px; /* Ruimte tussen de blokken */
 }
 
-.opvul2 {
-  background-color: gray;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Maakt de cirkel rond */
-}
 
 .opvul {
   background-color: lightgray;
@@ -74,10 +68,16 @@ main {
   border: 2px solid white; /* Optioneel voor visuele scheiding */
 }
 
-
 .opvul1 {
   background-color: lightgray;
   width: 300px; /* Breedte van de blokken */
   height: 25px; /* Hoogte van de blokken */
   border: 2px solid white; /* Optioneel voor visuele scheiding */
+}
+
+.opvul2 {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Maakt de cirkel rond */
 }
