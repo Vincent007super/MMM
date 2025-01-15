@@ -6,6 +6,9 @@
     <title>Profiel - <?php echo htmlspecialchars($profiel_naam); ?></title>
 </head>
 <body>
+
+    <?php include 'header.php' ?>
+
 <h1>Profiel van <?php echo htmlspecialchars($profiel_naam); ?></h1>
 
 <?php if ($profiel): ?>
