@@ -8,7 +8,7 @@ body {
 
 header {
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
 }
 
 #layer1, #layer2 {
@@ -48,6 +48,7 @@ header > h1 {
     font-size: 5vw;
     right: 1.2vw;
     cursor: pointer;
+    margin-top: 2.5vh;
 }
 
-/* Put next css here */
+/* Put next css here */ 

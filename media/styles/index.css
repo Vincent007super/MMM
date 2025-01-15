@@ -1,0 +1,72 @@
+/* Background css */
+.background1, .background2, .background3, .background4, .background5 {
+    transition: all 1.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(30%);
+}
+
+#background {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.background1 {
+    background-image: url(../images/index_image1.jpg);
+}
+
+.background2 {
+    background-image: url(../images/index_image2.png);
+}
+
+.background3 {
+    background-image: url(../images/index_image3.jpg);
+}
+
+.background4 {
+    background-image: url(../images/index_image4.jpg);
+}
+
+.background5 {
+    background-image: url(../images/index_image5.jpg);
+}
+
+/* Main code */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper1 > h1 {
+    font-size: 3.5vw;
+}
+
+button {
+    width: 30vw;
+    height: 5vw;
+    cursor: pointer;
+    border-radius: 30mm;
+    background-color: #00d8db;
+    border-color: black;
+}
+
+button > a {
+    font-size: 4vw;
+    text-decoration: none;
+    color: black;
+}
