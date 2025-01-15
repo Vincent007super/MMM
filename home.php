@@ -5,7 +5,13 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+session_start(); // Start de sessie
 
+if (!isset($_SESSION['user_name'])) {
+    header('Location: login.php'); // Stuur niet-ingelogde gebruikers naar login
+    exit;
+}
+$profiel_naam = $_SESSION['user_name'];
 // Connect to the database
 $conn = new mysqli($host, $user, $pass, $db);
 
@@ -33,13 +39,14 @@ function getRandomnummers($conn, $limit = 4) {
 
 // Prepare the data for the page
 $Artiest_rows = [];
-while ($Artiest = $Artiest->fetch_assoc()) {
-    $nummers = getnummersByArtiest($conn, $Artiest['gebrID']);
+while ($artiest_row = $Artiest->fetch_assoc()) {
+    $nummers = getnummersByArtiest($conn, $artiest_row['gebrID']);
     $Artiest_rows[] = [
-        'Artiest' => $Artiest,
+        'Artiest' => $artiest_row,
         'nummers' => $nummers->fetch_all(MYSQLI_ASSOC),
     ];
 }
+
 
 // Fetch random nummers
 $random_nummers = getRandomnummers($conn);

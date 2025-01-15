@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_name'] = $user['naam']; // Sla de naam op in de sessie
 
                 // Doorsturen naar de welkom.php pagina
-                header('Location: welkom.php');
+                header('Location: index.php');
                 exit;
             }
         } else {

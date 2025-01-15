@@ -1,6 +1,4 @@
-// Header
-let isOpen = false;
-let menu;
+
 
 // Header functions
 function header() {
@@ -24,3 +22,12 @@ function closeHeader() {
     menu.classList.add("layer1_inactive")
     isOpen = false;
 }
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
