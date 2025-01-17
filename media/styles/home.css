@@ -72,11 +72,13 @@ main {
 }
 
 
-.songImg {
+.nummerImg {
   background-color: lightgray;
-  width: 200px; /* Breedte van de blokken */
-  height: 100px; /* Hoogte van de blokken */
+  width: 14vw; /* Breedte van de blokken */
+  height: 15vh; /* Hoogte van de blokken */
   border: 2px solid white; /* Optioneel voor visuele scheiding */
+  background-position: center;
+  background-size: cover;
 }
 
 .artistName {
