@@ -72,11 +72,13 @@ main {
 }
 
 
-.songImg {
+.nummerImg {
   background-color: lightgray;
-  width: 200px; /* Breedte van de blokken */
-  height: 100px; /* Hoogte van de blokken */
+  width: 14vw; /* Breedte van de blokken */
+  height: 15vh; /* Hoogte van de blokken */
   border: 2px solid white; /* Optioneel voor visuele scheiding */
+  background-position: center;
+  background-size: cover;
 }
 
 .artistName {
@@ -91,4 +93,11 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50%; /* Maakt de cirkel rond */
+}
+
+.artistImg img {
+  width: 100px; /* Adjust as needed */
+  height: 100px;
+  border-radius: 50%; /* Keeps the circular shape */
+  object-fit: cover; /* Ensures the image fits the container */
 }
