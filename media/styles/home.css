@@ -1,12 +1,16 @@
 body {
   margin: 0;
-  background-color: rgb(33, 33, 33); /* Donkere maar contrasterende achtergrondkleur */
-  color: white; /* Tekst wordt leesbaarder */
+  background-color: rgb(33, 33, 33);
+  /* Donkere maar contrasterende achtergrondkleur */
+  color: white;
+  /* Tekst wordt leesbaarder */
 }
 
 h1 {
-  color: #00ffff; /* Pas de kleur van de titels aan voor zichtbaarheid */
-  text-align: center; /* Center de titels */
+  color: #00ffff;
+  /* Pas de kleur van de titels aan voor zichtbaarheid */
+  text-align: center;
+  /* Center de titels */
 }
 
 h2 {
@@ -14,18 +18,22 @@ h2 {
   text-align: center;
 }
 
+h5 {
+  margin: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Voeg afstand toe tussen wrapper1-elementen */
+  gap: 20px;
+  /* Voeg afstand toe tussen wrapper1-elementen */
 }
 
-.artistInfo {
+.ArtiestInfo {
   display: flex;
   width: max-content;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 20px;
 }
 
 .wrapper3 {
@@ -37,7 +45,6 @@ main {
 .wrapper1 {
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Zorg voor ruimte rondom de secties */
 }
 
 .wrapper2 {
@@ -45,59 +52,85 @@ main {
   flex-direction: row;
   gap: 2.5vw;
   overflow-x: auto;
+  padding: 2vw;
 }
 
-.wrapper4{
+.wrapper4 {
   display: flex;
   flex-direction: column;
   max-width: inherit;
+  justify-content: space-between;
+  min-height: 15vh;
 }
 
-.wrapper4 > h1 {
+.wrapper4>h1 {
   max-width: inherit;
 }
 
 .wrapper5 {
-  display: flex; /* Plaatst de cirkel en de blokken naast elkaar */
+  display: flex;
+  /* Plaatst de cirkel en de blokken naast elkaar */
   flex-direction: row;
   justify-content: space-between;
 }
 
 .wrapper6 {
   display: flex;
-  flex-direction: column; /* Stapelt de blokken verticaal */
+  flex-direction: column;
+  /* Stapelt de blokken verticaal */
   justify-content: flex-end;
   max-width: 40%;
-  gap: 10px; /* Ruimte tussen de blokken */
+  gap: 10px;
+  /* Ruimte tussen de blokken */
 }
 
+main {
+  margin: 2.5vw;
+  height: 1vh;
+}
 
 .nummerImg {
   background-color: lightgray;
-  width: 14vw; /* Breedte van de blokken */
-  height: 15vh; /* Hoogte van de blokken */
-  border: 2px solid white; /* Optioneel voor visuele scheiding */
+  width: 14vw;
+  /* Breedte van de blokken */
+  height: 15vh;
+  /* Hoogte van de blokken */
+  border: 2px solid white;
+  /* Optioneel voor visuele scheiding */
   background-position: center;
   background-size: cover;
+  transform: scale(1);
+  transition: all 1.5s;
+}
+
+.nummerImg:hover {
+  transform: scale(1.2);
 }
 
 .artistName {
   background-color: lightgray;
-  width: 300px; /* Breedte van de blokken */
-  height: 25px; /* Hoogte van de blokken */
-  border: 2px solid white; /* Optioneel voor visuele scheiding */
+  width: 300px;
+  /* Breedte van de blokken */
+  height: 25px;
+  /* Hoogte van de blokken */
+  border: 2px solid white;
+  /* Optioneel voor visuele scheiding */
 }
 
 .artistImg {
   background-color: gray;
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Maakt de cirkel rond */
+  border-radius: 50%;
+  /* Maakt de cirkel rond */
 }
 
 .artistImg img {
-  width: 100px; /* Adjust as needed */
+  width: 100px;
+  /* Adjust as needed */
   height: 100px;
-  border-radius: 50%; /* Keeps the circular shape */
-  object-fit: cover; /* Ensures the image fits the container */
+  border-radius: 50%;
+  /* Keeps the circular shape */
+  object-fit: cover;
+  /* Ensures the image fits the container */
 }
