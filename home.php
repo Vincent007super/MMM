@@ -5,7 +5,15 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$Artiest_rows = [];
+session_start(); // Start de sessie
+
+if (!isset($_SESSION['user_name'])) {
+    header('Location: login.php'); // Stuur niet-ingelogde gebruikers naar login
+    exit;
+}
+$profiel_naam = $_SESSION['user_name'];
+// Connect to the database
+
 $conn = new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
@@ -30,7 +38,8 @@ function getRandomnummers($conn, $limit = 4) {
             ORDER BY RAND() LIMIT $limit";
     return $conn->query($sql);
 }
-
+// Prepare the data for the page
+$Artiest_rows = [];
 while ($artiest_row = $Artiest->fetch_assoc()) {
     $nummers = getnummersByArtiest($conn, $artiest_row['gebrID']);
     $Artiest_rows[] = [
@@ -39,6 +48,8 @@ while ($artiest_row = $Artiest->fetch_assoc()) {
     ];
 }
 
+
+// Fetch random nummers
 $random_nummers = getRandomnummers($conn);
 $conn->close();
 include 'views/home_view.php';

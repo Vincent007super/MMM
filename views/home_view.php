@@ -11,7 +11,16 @@
 
 <body>
     <?php include 'header.php' ?>
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="vrienden.php">Vrienden</a>
+  <a href="https://089329.stu.sd-lab.nl/MMM/profiel.php?naam=<?php echo urlencode($_SESSION['user_name']); ?>">
+ profiel 
+</a>
+</div>
 
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     <main>
 
         <?php foreach ($Artiest_rows as $row): ?>
@@ -53,7 +62,6 @@
                             <h1><?= htmlspecialchars($nummer['Sname']) ?></h1>
                             <div class="wrapper5">
                             <h5><?= htmlspecialchars($row['Artiest']['artname']) ?></h5>
-
                             </div>
                         </div>
                     </div>
