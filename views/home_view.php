@@ -11,23 +11,12 @@
 
 <body>
     <?php include 'header.php' ?>
-    <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="vrienden.php">Vrienden</a>
-  <a href="https://089329.stu.sd-lab.nl/MMM/profiel.php?naam=<?php echo urlencode($_SESSION['user_name']); ?>">
- profiel 
-</a>
-</div>
-
-
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
     <main>
-
         <?php foreach ($Artiest_rows as $row): ?>
             <div class="ArtiestInfo">
                 <div class="artistImg">
-                <img src="media/images/artiesten/<?php echo htmlspecialchars($row['Artiest']['image_data']); ?>"
-     alt="<?php echo htmlspecialchars($row['Artiest']['artname']); ?>">
+                    <img src="media/images/artiesten/<?php echo htmlspecialchars($row['Artiest']['image_data']); ?>"
+                        alt="<?php echo htmlspecialchars($row['Artiest']['artname']); ?>">
 
                 </div>
                 <div class="wrapper6">

@@ -1,4 +1,6 @@
-
+let isOpen = false;
+let menuBack;
+let menu;
 
 // Header functions
 function header() {
@@ -10,24 +12,21 @@ function header() {
 }
 
 function openHeader() {
-    menu = document.getElementById("layer1");
-    menu.classList.add("layer1_active");
-    menu.classList.remove("layer1_inactive")
+    menuBack = document.getElementById("layer1");
+    menuBack.classList.add("layer1_active");
+    menuBack.classList.remove("layer1_inactive");
+    menu = document.getElementById("menu");
+    menu.classList.add("menu_active");
+    menu.classList.remove("menu_inactive");
     isOpen = true;
 }
 
 function closeHeader() {
-    menu = document.getElementById("layer1");
-    menu.classList.remove("layer1_active")
-    menu.classList.add("layer1_inactive")
+    menuBack = document.getElementById("layer1");
+    menuBack.classList.remove("layer1_active");
+    menuBack.classList.add("layer1_inactive");
+    menu = document.getElementById("menu");
+    menu.classList.remove("menu_active");
+    menu.classList.add("menu_inactive");
     isOpen = false;
 }
-
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }

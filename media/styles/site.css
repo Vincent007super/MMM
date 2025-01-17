@@ -4,6 +4,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     user-select: text;
+    transition: all 1.5s;
 }
 
 header {
@@ -44,20 +45,53 @@ header {
 
 header > h1 {
     position: fixed;
-    z-index: 3;
-    font-size: 5vw;
+    z-index: 10;
+    font-size: 3vw;
     right: 1.2vw;
+    height: 11vh;
     cursor: pointer;
-    margin-top: 2.5vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
-
-/* Put next css here */ 
 
 body {
     font-family: "Lato", sans-serif;
   }
   
-  .sidenav {
+#menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 11vh;
+  z-index: 5;
+  transition: all 2s;
+}
+
+.menu_inactive {
+  top: -12vh;
+  transform: scale(0.6);
+}
+
+.menu_active {
+  top: 0vh;
+  transform: scale(1);
+}
+
+#menu > * {
+  z-index: inherit;
+}
+
+.pageLinks {
+  z-index: 5;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+  /* .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -94,4 +128,4 @@ body {
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+  } */
