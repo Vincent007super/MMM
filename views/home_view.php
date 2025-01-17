@@ -61,7 +61,7 @@
                         <div class="wrapper4">
                             <h1><?= htmlspecialchars($nummer['Sname']) ?></h1>
                             <div class="wrapper5">
-                            <h5><?= htmlspecialchars($row['Artiest']['artname']) ?></h5>
+                            <h5><?= htmlspecialchars($nummer['artname']) ?></h5>
                             </div>
                         </div>
                     </div>

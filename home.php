@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 $Artiest = $conn->query("SELECT * FROM Artiest");
 
 if (!$Artiest || $Artiest->num_rows === 0) {
-    die("Geen artiesten gevonden.");
+    die("Geen Artiesten gevonden.");
 }
 
 function getnummersByArtiest($conn, $gebrID, $limit = 6) {
@@ -40,10 +40,10 @@ function getRandomnummers($conn, $limit = 4) {
 }
 // Prepare the data for the page
 $Artiest_rows = [];
-while ($artiest_row = $Artiest->fetch_assoc()) {
-    $nummers = getnummersByArtiest($conn, $artiest_row['gebrID']);
+while ($Artiest_row = $Artiest->fetch_assoc()) {
+    $nummers = getnummersByArtiest($conn, $Artiest_row['gebrID']);
     $Artiest_rows[] = [
-        'Artiest' => $artiest_row,
+        'Artiest' => $Artiest_row,
         'nummers' => $nummers ? $nummers->fetch_all(MYSQLI_ASSOC) : [],
     ];
 }
