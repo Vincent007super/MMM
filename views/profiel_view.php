@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profiel - <?php echo htmlspecialchars($profiel_naam); ?></title>
+    <link rel="stylesheet" href="media/styles/profiel.css">
+    <link rel="stylesheet" href="media/styles/site.css">
 </head>
 <body>
 
