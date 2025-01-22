@@ -1,0 +1,92 @@
+/* Header css */
+body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    user-select: text;
+    transition: all 1.5s;
+}
+
+header {
+    width: 100vw;
+    height: 12vh;
+}
+
+#layer1, #layer2 {
+    position: fixed;
+    width: 110vw;
+    height: 30vh;
+}
+
+#layer1 {
+    background-color: #00d8db;
+    left: -2vw;
+    z-index: 2;
+    transition: all 2s;
+}
+
+.layer1_inactive {
+    transform: rotate(4deg);
+    top: -23vh;
+}
+
+.layer1_active {
+    transform: rotate(0deg);
+    top: -19vh;
+}
+
+#layer2 {
+    background-color: #b30300;
+    transform: rotate(-2deg);
+    left: -2vw;
+    top: -23vh;
+    z-index: 1;
+}
+
+header > h1 {
+    position: fixed;
+    z-index: 10;
+    font-size: 3vw;
+    right: 1.2vw;
+    height: 11vh;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+#menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 11vh;
+  z-index: 5;
+  transition: all 2s;
+}
+
+.menu_inactive {
+  top: -12vh;
+  transform: scale(0.6);
+}
+
+.menu_active {
+  top: 0vh;
+  transform: scale(1);
+}
+
+#menu > * {
+  z-index: inherit;
+}
+
+.pageLinks {
+  z-index: 5;
+  text-decoration: none;
+  color: whitesmoke;
+}

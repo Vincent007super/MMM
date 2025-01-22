@@ -7,6 +7,7 @@
     <title>Music Magnet Magazine - Home</title>
     <link rel="stylesheet" href="media/styles/index.css">
     <link rel="stylesheet" href="media/styles/site.css">
+    <link rel="shortcut icon" href="media/images/logo.jpg" type="image/x-icon">
 </head>
 
 <body>

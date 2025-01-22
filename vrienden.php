@@ -29,48 +29,6 @@ if (empty($volgende_gebruikers) && empty($geblokkeerde_gebruikers)) {
     echo "Je volgt momenteel geen gebruikers en hebt geen gebruikers geblokkeerd.";
     exit;
 }
+
+include 'views/vrienden_view.php'
 ?>
-
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vriendenpagina</title>
-</head>
-<body>
-<h1>Jouw Vrienden</h1>
-
-<!-- Gevolgde Gebruikers -->
-<h2>Gevolgde Gebruikers</h2>
-<?php if (empty($volgende_gebruikers)): ?>
-    <p>Je volgt momenteel niemand.</p>
-<?php else: ?>
-    <ul>
-        <?php foreach ($volgende_gebruikers as $gebruiker): ?>
-            <li>
-                <a href="profiel.php?naam=<?php echo urlencode($gebruiker['naam']); ?>">
-                    <?php echo htmlspecialchars($gebruiker['naam']); ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-
-<!-- Geblokkeerde Gebruikers -->
-<h2>Geblokkeerde Gebruikers</h2>
-<?php if (empty($geblokkeerde_gebruikers)): ?>
-    <p>Je hebt momenteel niemand geblokkeerd.</p>
-<?php else: ?>
-    <ul>
-        <?php foreach ($geblokkeerde_gebruikers as $gebruiker): ?>
-            <li>
-                <a href="profiel.php?naam=<?php echo urlencode($gebruiker['naam']); ?>">
-                    <?php echo htmlspecialchars($gebruiker['naam']); ?>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-</body>
-</html>

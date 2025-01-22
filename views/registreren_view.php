@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
+    <link rel="stylesheet" href="media/styles/registreren.css">
+    <link rel="shortcut icon" href="media/images/logo.jpg" type="image/x-icon">
+
 </head>
 <body>
 <h1>Registreren</h1>

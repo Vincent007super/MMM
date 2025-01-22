@@ -3,111 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="media/styles/home.css"> 
-    <link rel="stylesheet" href="media/styles/site.css">   
+    <title>Vrienden Page</title>
+    <link rel="stylesheet" href="media/styles/vrienden.css">   
+    <link rel="shortcut icon" href="media/images/logo.jpg" type="image/x-icon">
+
 </head>
 <body>
+
 <?php include 'header.php'?> 
 
-<main>
-      <div class="wrapper5">
-        <div class="opvul2"></div> 
-         <div class="wrapper6">
-         <div class="opvul1"></div> 
-    </div>
-</div>
+<h1>Jouw Vrienden</h1>
 
+<!-- Gevolgde Gebruikers -->
+<h2>Gevolgde Gebruikers</h2>
+<?php if (empty($volgende_gebruikers)): ?>
+    <p>Je volgt momenteel niemand.</p>
+<?php else: ?>
+    <ul>
+        <?php foreach ($volgende_gebruikers as $gebruiker): ?>
+            <li>
+                <a href="profiel.php?naam=<?php echo urlencode($gebruiker['naam']); ?>">
+                    <?php echo htmlspecialchars($gebruiker['naam']); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                    <h1>Cock 'n Ball torture</h1> <!--Title-->
-                    <div class="wrapper5">
-                        <h5>Sigma boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                </div>
-                </div>
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>               
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>                
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>                
-                <div class="wrapper3">
-                <div class="opvul"> </div>
-                </div>
-            </div>
-        </div>
-     
-        <!-- <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-            </div>
-        </div>
-
-
-        <div class="wrapper5">
-          <div class="opvul2"></div>
-          <div class="wrapper6">
-         <div class="opvul1"></div> 
-        </div>
-        </div>
-
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-                <div class="opvul"> </div>
-            </div>
-        </div> -->
-
-
-        <div class="wrapper1">
-            <div class="wrapper2">
-                <div class="wrapper3">
-                <div class="opvul"> </div> <!--Afbeelding-->
-                <div class="wrapper4"> <!--Text-->
-                    <h1>Cock 'n Ball torture</h1> <!--Title-->
-                    <div class="wrapper5">
-                        <h5>Sigma boy clan</h5> <!--Artist-->
-                        <h5>3:23</h5> <!--Lengte-->
-                    </div>
-                </div>
-                </div>
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>               
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>                
-                <div class="wrapper3">
-                <div class="opvul"> 
-                </div>
-                </div>                
-                <div class="wrapper3">
-                <div class="opvul"> </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<!-- Geblokkeerde Gebruikers -->
+<h2>Geblokkeerde Gebruikers</h2>
+<?php if (empty($geblokkeerde_gebruikers)): ?>
+    <p>Je hebt momenteel niemand geblokkeerd.</p>
+<?php else: ?>
+    <ul>
+        <?php foreach ($geblokkeerde_gebruikers as $gebruiker): ?>
+            <li>
+                <a href="profiel.php?naam=<?php echo urlencode($gebruiker['naam']); ?>">
+                    <?php echo htmlspecialchars($gebruiker['naam']); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
 </body>
 </html>

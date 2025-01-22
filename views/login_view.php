@@ -1,5 +1,3 @@
-
-<!-- login_view.php (HTML-weergave) -->
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inloggen</title>
     <link rel="stylesheet" href="media/styles/login.css">
+    <link rel="shortcut icon" href="media/images/logo.jpg" type="image/x-icon">
 </head>
 <body>
 <h1>Inloggen</h1>
