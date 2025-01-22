@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <?php include_once 'header.php' ?>
+   
     <main>
         <div class="wrapper1">
             <h1>Meld je nu aan voor <b>de</b> nieuwe muziek app van het jaar!</h1>
             <button type="button">
-                <a href="#">
+                <a href="registreren.php">
                     Schrijf je nu in
                 </a>
             </button>

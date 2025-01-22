@@ -1,6 +1,9 @@
 <?php
 require 'config.php';
 session_start();
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 if (!isset($_SESSION['user_name'])) {
     header('Location: login.php');
     exit;
@@ -24,10 +27,20 @@ $stmt_geblokkeerd = $conn->prepare($sql_geblokkeerd);
 $stmt_geblokkeerd->execute([':blokker' => $huidige_gebruiker]);
 $geblokkeerde_gebruikers = $stmt_geblokkeerd->fetchAll();
 
-// Als er geen gebruikers zijn die je volgt of hebt geblokkeerd
-if (empty($volgende_gebruikers) && empty($geblokkeerde_gebruikers)) {
-    echo "Je volgt momenteel geen gebruikers en hebt geen gebruikers geblokkeerd.";
-    exit;
+// Zoekfunctionaliteit
+$zoek_resultaten = [];
+$zoekterm = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $zoekterm = isset($_POST['zoekterm']) ? trim($_POST['zoekterm']) : '';
+
+    if (!empty($zoekterm)) {
+        // Zoek in de database naar gebruikersnamen die overeenkomen
+        $sql_zoek = "SELECT naam FROM Gebruiker WHERE naam LIKE :zoekterm";
+        $stmt = $conn->prepare($sql_zoek);
+        $stmt->execute([':zoekterm' => "%$zoekterm%"]);
+        $zoek_resultaten = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 include 'views/vrienden_view.php'
